@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image:url("https://winzoro.net/uploads/posts/2020-02/1581006806_recital_mp4_snapshot_00_05_650.jpg");
+}
+.AppContainer{
+    width: 800px;
+    margin-left: 29%;
+    padding: 15px;
+    border-radius: 15px;
+    margin-top: 50px;
+    transition: 0.76s all;
+}
+.PostForm{
+    color: #fff;
+}
+.AppContainer:hover{
+    background-color: rgba(0, 0, 0, 0.22);
+    transition: 0.76s background-color;
+}
+.post__btns button{
+    border: 1px solid #000;
+    border-radius: 100px;
+    width: 100px;
+    height: 30px;
+}.post__btns button:hover{
+    background-color: #545454;
+    color: #c8c8c8;
+    transition:0.7s all ease;
+}
+ #root{
+     display: flex;
+     justify-content: center;
+ }
+ .post{
+     display: flex;
+     padding:15px;
+     border-radius:10px;
+     margin-top: 15px;
+     border: 2px solid teal;
+     justify-content: space-between;
+     align-items: center;
+ }
+ .post:hover{
+     background-color: rgba(255, 255, 255, 0.4);
+     border: 2px solid;
+     transition: 0.3s all ease;
+ }
+.post-enter {
+    opacity: 0;
+}
+.post-enter-active {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+}
+.post-exit {
+    opacity: 1;
+}
+.post-exit-active {
+    opacity: 0;
+    transition: opacity 500ms ease-in;
+}
+.App{
+    width: 100%;
+}
+header{
+    display: flex;
+    justify-content:space-between;
+    background-color: rgba(0, 0, 0, 0.45);
+    width: 100%;
+    height: 7%;
+    align-items: center;
+}
+header a {
+    color: #fff;
+    text-decoration: none;
+    width: 87%;
+    text-align: center;
+}
