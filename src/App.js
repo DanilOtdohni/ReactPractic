@@ -5,7 +5,12 @@ import MyButton from "./components/UI/button/MyButton";
 import MyInput from "./components/UI/input/MyInput";
 import PostForm from "./components/PostForm";
 import MySelect from "./components/UI/select/MySelect";
+import MyModel from "./components/UI/Model/MyModel"
+
 function App() {
+
+    const [modal, setModal] = useState(false);
+
     const [posts, setPosts] = useState([
         {id: 1, title: 'JS',body: 'фыаф'},
         {id: 2, title: 'JS 1',body: 'фыаф 1'},
@@ -64,8 +69,14 @@ const sortedAndSearchedPosts = useMemo(() => {
                 Support
             </a>
         </header>
+
         <div className="AppContainer">
-        <PostForm create={createPost}/>
+            <MyButton onClick={() => setModal(true)}>
+                Create post
+            </MyButton>
+            <MyModel visible={modal} setVisible={setModal}>
+                <PostForm create={createPost}/>
+            </MyModel>
         <hr style={{margin: '15px 0'}}/>
         <MyInput
             placeholder="Search"
